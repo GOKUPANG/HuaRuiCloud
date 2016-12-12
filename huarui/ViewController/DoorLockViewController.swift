@@ -224,7 +224,7 @@ class DoorLockViewController: UIViewController,UITextFieldDelegate {
                 
                 unlockGaoDunLock(passwd)
                 
-                print("点击了高盾🔐开锁的OK按钮")
+               // print("点击了高盾🔐开锁的OK按钮") 测试
                 
                 
                 
