@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SingleImageViewCell" customModule="华睿云" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_scene_athome" translatesAutoresizingMaskIntoConstraints="NO" id="zRL-vT-aYi">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="zRL-vT-aYi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="O8R-T3-oYy"/>
+                <constraint firstAttribute="trailing" secondItem="zRL-vT-aYi" secondAttribute="trailing" id="S47-wI-WtH"/>
+                <constraint firstAttribute="bottom" secondItem="zRL-vT-aYi" secondAttribute="bottom" id="fYG-KM-Nd0"/>
+                <constraint firstItem="zRL-vT-aYi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hmq-HK-y96"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="zRL-vT-aYi" id="ghP-AL-Nf1"/>
+            </connections>
+            <point key="canvasLocation" x="344" y="412"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ico_scene_athome" width="238" height="238"/>
+    </resources>
+</document>

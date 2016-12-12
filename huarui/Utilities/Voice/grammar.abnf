@@ -1,0 +1,112 @@
+#ABNF 1.0 UTF-8;
+mode voice;
+language zh-cn;
+tag-format <semantics/1.0>;
+meta "temp" is "digit";
+
+root $main;
+public $main = $motor_ctrl 			//电机控制
+				| $relay_ctrl 		//继电器设备控制
+				| $air_ctrl 		//空调控制
+				| $scene_ctrl;		//情景模式
+
+/*******************************************↓↓窗帘控制↓↓********************************************************/	
+	
+$motor_ctrl = ([把]{out.device_type="电机"}$room{out.room=rules.room; out.device_type="电机";} [的]
+				$curtain{out.device=rules.curtain} 
+				$motor_act{out.action=rules.motor_act} )
+				 | 
+				({out.device_type="电机";}$motor_act{out.action=rules.motor_act;} 
+				$room{out.room=rules.room;} [的]
+				$curtain{out.device=rules.curtain} )
+				|
+				([把]{out.device_type="电机"}
+				$curtain{out.device=rules.curtain} 
+				$motor_act{out.action=rules.motor_act} );
+
+
+$motor_device = $curtain{out="窗帘";} ;
+
+	
+$motor_act = $motor_act_off{out="关";} | $motor_act_on{out="开";} | $motor_act_stop{out="停";};
+
+$motor_act_on = 拉开 | 打开 | 开 | 开启  | 拉下来 | 拉下;
+
+$motor_act_off = 闭合 | 拉上 | 拉上去 | 合上 | 合拢 | 靠上 | 关 | 关闭 | 关了;
+
+$motor_act_stop = 停 | 停止 | 停了 | 暂停 | 停下;
+
+/********************************↓↓空调控制↓↓**********************************/
+
+$air_ctrl = $only_airdevice | $room_airdevice | $floor_room_airdevice ;
+
+$only_airdevice = [把]$air_device{out.device_type="空调"} $air_action ;	
+
+$room_airdevice = [把] $room{out.room=rules.room} [的] $air_device{out.device_type="空调"} $air_action ;		
+
+$floor_room_airdevice= [把] $floor{out.floor=rules.floor} $room{out.room=rules.room} [的] $air_device{out.device_type="空调"} $air_action ;	
+
+$air_action = $action_temp | $action_speed | $action_mode ;
+
+$action_temp = [调到 | 设为] $temp{out.temp=rules.temp;}度 ;
+
+$action_speed = [风速调到 | 风速设为 | 风速调为] $air_speed{out.speed=rules.air_speed} [风速] ; 
+
+$action_mode = [模式 | 模式设为 | 调为 | 调到] $air_mode{out.mode=rules.air_mode} [模式] ;
+
+$air_speed = 自动{out="0"} |
+ 			一级{out="1"} | 
+ 			一档{out="1"} | 
+			低{out="1"} | 
+			低速{out="1"} | 
+			二级{out="2"} | 
+			二档{out="2"} | 
+			中{out="2"} | 
+			中速{out="2"} | 
+			三级{out="3"} |
+			三档{out="3"} |
+			高{out="2"} |
+			高速{out="2"} ; 
+
+$air_mode = 自动 | 制冷 | 制热 | 除湿 | 通风 | 强力 ;
+
+$air_device = 空调{out="空调";} | 
+			制冷{out="空调";} | 
+			空调机{out="空调";} | 
+			中央空调{out="空调";} | 
+			温度{out="空调";} ;
+
+$temp = 十六{out="16"} | 十七{out="17"} | 
+		十八{out="18"} | 十九{out="19"} | 
+		二十{out="20"} | 二十一{out="21"} | 
+		二十二{out="22"} | 二十三{out="23"} | 
+		二十四{out="24"} | 二十五{out="25"} | 
+		二十六{out="26"} | 二十七{out="27"} | 
+		二十八{out="28"} | 二十九{out="29"} | 
+		三十{out="30"} | 三十一{out="31"} | 
+		三十二{out="32"};
+
+/*****************************↓↓继电器控制↓↓***********************************/
+	
+$relay_ctrl = $device_action | $action_device ;	
+$action_device = {out.device_type="继电器";}$action{out.action=rules.action} $device{out.device=rules.device} ;
+$device_action = [把|帮我把|请帮我把]{out.device_type="继电器";}$device{out.device=rules.device} $action{out.action=rules.action} ;
+
+$action = $on{out="开";} | $off{out="关";} ;
+
+
+$on = 开|开启 | 打开 | 通电 | 通 | 亮 | 点亮 | 
+	open!en-us | on!en-us | "turn on"!en-us ;
+
+$off = 关 | 关了 | 关闭 |熄灭 |熄了| 熄灯| 灭 |灭了|断电| 断| 切断| 
+	"turn off"!en-us | off!en-us |close!en-us ;
+		
+/****************************↓↓情景模式↓↓************************************/
+		
+$scene_ctrl = [启动|打开]{out.device_type="情景"}$scene{out.scene=rules.scene}[模式];
+
+//$device 设备列表 
+//$curtain 窗帘/电机列表
+//$scene 情景列表
+//$room 房间列表
+//$floor 楼层列表

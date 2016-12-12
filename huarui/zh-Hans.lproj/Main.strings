@@ -1,0 +1,132 @@
+
+/* Class = "UITextView"; text = "        广州华睿电子科技有限公司是从事物联网云数据、智能家居、智慧城市方案解决、集成、应用、服务于一体的高科技股份制企业。下设工业电源、舞台灯光音响、LED照明及电子制造四大产业链子公司。\n        公司总部位于广州番禺节能科技园总部1号楼。华睿科技拥有一支专业、年轻的、富有创新精神的管理、研发、营销团队。为人们提供丰富的智能终端以及革命性的交互平台和应用，给世界带来高效、绿色、创新的智能化应用和体验。\n        同时，华睿科技携手浙江大学合作研发新一代智慧生活平台，并致力于与合作伙伴共同成长，从而实现共赢目标。实现个人价值、公司价值、社会价值的高度统一！实现安居乐业中国梦！"; ObjectID = "1uU-zu-zyH"; */
+"1uU-zu-zyH.text" = "        广州华睿电子科技有限公司是从事物联网云数据、智能家居、智慧城市方案解决、集成、应用、服务于一体的高科技股份制企业。下设工业电源、舞台灯光音响、LED照明及电子制造四大产业链子公司。\n        公司总部位于广州番禺节能科技园总部1号楼。华睿科技拥有一支专业、年轻的、富有创新精神的管理、研发、营销团队。为人们提供丰富的智能终端以及革命性的交互平台和应用，给世界带来高效、绿色、创新的智能化应用和体验。\n        同时，华睿科技携手浙江大学合作研发新一代智慧生活平台，并致力于与合作伙伴共同成长，从而实现共赢目标。实现个人价值、公司价值、社会价值的高度统一！实现安居乐业中国梦！";
+
+/* Class = "UISegmentedControl"; 7Oe-Dq-CrM.segmentTitles[0] = "自动"; ObjectID = "7Oe-Dq-CrM"; */
+"7Oe-Dq-CrM.segmentTitles[0]" = "自动";
+
+/* Class = "UISegmentedControl"; 7Oe-Dq-CrM.segmentTitles[1] = "制冷"; ObjectID = "7Oe-Dq-CrM"; */
+"7Oe-Dq-CrM.segmentTitles[1]" = "制冷";
+
+/* Class = "UISegmentedControl"; 7Oe-Dq-CrM.segmentTitles[2] = "抽湿"; ObjectID = "7Oe-Dq-CrM"; */
+"7Oe-Dq-CrM.segmentTitles[2]" = "抽湿";
+
+/* Class = "UISegmentedControl"; 7Oe-Dq-CrM.segmentTitles[3] = "送风"; ObjectID = "7Oe-Dq-CrM"; */
+"7Oe-Dq-CrM.segmentTitles[3]" = "送风";
+
+/* Class = "UISegmentedControl"; 7Oe-Dq-CrM.segmentTitles[4] = "制热"; ObjectID = "7Oe-Dq-CrM"; */
+"7Oe-Dq-CrM.segmentTitles[4]" = "制热";
+
+/* Class = "UITextField"; placeholder = "密码"; ObjectID = "7w8-2D-WlO"; */
+"7w8-2D-WlO.placeholder" = "密码";
+
+/* Class = "UITabBarItem"; title = "安防"; ObjectID = "BWb-CK-dUc"; */
+"BWb-CK-dUc.title" = "安防";
+
+/* Class = "UITabBarItem"; title = "房间管理"; ObjectID = "CQe-GP-Vmi"; */
+"CQe-GP-Vmi.title" = "房间管理";
+
+/* Class = "UITabBarItem"; title = "探测器"; ObjectID = "Dgt-k9-5NC"; */
+"Dgt-k9-5NC.title" = "探测器";
+
+/* Class = "UIButton"; normalTitle = "手动摆风"; ObjectID = "EkP-Yx-KE3"; */
+"EkP-Yx-KE3.normalTitle" = "手动摆风";
+
+/* Class = "UILabel"; text = "23"; ObjectID = "FbC-14-Mc9"; */
+"FbC-14-Mc9.text" = "23";
+
+/* Class = "UISegmentedControl"; GCE-LH-HDm.segmentTitles[0] = "抽湿"; ObjectID = "GCE-LH-HDm"; */
+"GCE-LH-HDm.segmentTitles[0]" = "抽湿";
+
+/* Class = "UISegmentedControl"; GCE-LH-HDm.segmentTitles[1] = "制冷"; ObjectID = "GCE-LH-HDm"; */
+"GCE-LH-HDm.segmentTitles[1]" = "制冷";
+
+/* Class = "UISegmentedControl"; GCE-LH-HDm.segmentTitles[2] = "制热"; ObjectID = "GCE-LH-HDm"; */
+"GCE-LH-HDm.segmentTitles[2]" = "制热";
+
+/* Class = "UISegmentedControl"; GCE-LH-HDm.segmentTitles[3] = "送风"; ObjectID = "GCE-LH-HDm"; */
+"GCE-LH-HDm.segmentTitles[3]" = "送风";
+
+/* Class = "UIButton"; normalTitle = "手动摆风"; ObjectID = "KDN-wq-f6g"; */
+"KDN-wq-f6g.normalTitle" = "手动摆风";
+
+/* Class = "UILabel"; text = "Voice"; ObjectID = "LPu-ce-tfY"; */
+"LPu-ce-tfY.text" = "Voice";
+
+/* Class = "UITabBarItem"; title = "情景模式"; ObjectID = "McB-sl-gGc"; */
+"McB-sl-gGc.title" = "情景模式";
+
+/* Class = "UITextField"; placeholder = "用户名"; ObjectID = "NWP-2j-LeB"; */
+"NWP-2j-LeB.placeholder" = "用户名";
+
+/* Class = "UILabel"; text = "模式"; ObjectID = "PoK-U1-KEj"; */
+"PoK-U1-KEj.text" = "模式";
+
+/* Class = "UIButton"; normalTitle = "登  陆"; ObjectID = "RUp-97-d3v"; */
+"RUp-97-d3v.normalTitle" = "登  陆";
+
+/* Class = "UILabel"; text = "风速"; ObjectID = "S48-cu-aWb"; */
+"S48-cu-aWb.text" = "风速";
+
+/* Class = "UITabBarItem"; title = "常用设备"; ObjectID = "X6L-bw-3yd"; */
+"X6L-bw-3yd.title" = "常用设备";
+
+/* Class = "UIButton"; normalTitle = "自动摆风"; ObjectID = "XsJ-24-Gzp"; */
+"XsJ-24-Gzp.normalTitle" = "自动摆风";
+
+/* Class = "UIButton"; normalTitle = "记住密码"; ObjectID = "cm0-qS-EDU"; */
+"cm0-qS-EDU.normalTitle" = "记住密码";
+
+/* Class = "UIButton"; normalTitle = "自动摆风"; ObjectID = "dzr-3M-vgj"; */
+"dzr-3M-vgj.normalTitle" = "自动摆风";
+
+/* Class = "UITabBarItem"; title = "情景面板"; ObjectID = "hqM-SQ-PUD"; */
+"hqM-SQ-PUD.title" = "情景面板";
+
+/* Class = "UILabel"; text = "风速"; ObjectID = "huK-UL-jUO"; */
+"huK-UL-jUO.text" = "风速";
+
+/* Class = "UILabel"; text = "ºC"; ObjectID = "koS-at-jRj"; */
+"koS-at-jRj.text" = "ºC";
+
+/* Class = "UIButton"; normalTitle = "自动登陆"; ObjectID = "oPh-39-brq"; */
+"oPh-39-brq.normalTitle" = "自动登陆";
+
+/* Class = "UIButton"; normalTitle = "电源"; ObjectID = "ocI-Fd-MyM"; */
+"ocI-Fd-MyM.normalTitle" = "电源";
+
+/* Class = "UISegmentedControl"; opC-Iz-pGJ.segmentTitles[0] = "自动"; ObjectID = "opC-Iz-pGJ"; */
+"opC-Iz-pGJ.segmentTitles[0]" = "自动";
+
+/* Class = "UISegmentedControl"; opC-Iz-pGJ.segmentTitles[1] = "低"; ObjectID = "opC-Iz-pGJ"; */
+"opC-Iz-pGJ.segmentTitles[1]" = "低";
+
+/* Class = "UISegmentedControl"; opC-Iz-pGJ.segmentTitles[2] = "中"; ObjectID = "opC-Iz-pGJ"; */
+"opC-Iz-pGJ.segmentTitles[2]" = "中";
+
+/* Class = "UISegmentedControl"; opC-Iz-pGJ.segmentTitles[3] = "高"; ObjectID = "opC-Iz-pGJ"; */
+"opC-Iz-pGJ.segmentTitles[3]" = "高";
+
+/* Class = "UISegmentedControl"; p2B-eA-Jfn.segmentTitles[0] = "自动"; ObjectID = "p2B-eA-Jfn"; */
+"p2B-eA-Jfn.segmentTitles[0]" = "自动";
+
+/* Class = "UISegmentedControl"; p2B-eA-Jfn.segmentTitles[1] = "低"; ObjectID = "p2B-eA-Jfn"; */
+"p2B-eA-Jfn.segmentTitles[1]" = "低";
+
+/* Class = "UISegmentedControl"; p2B-eA-Jfn.segmentTitles[2] = "中"; ObjectID = "p2B-eA-Jfn"; */
+"p2B-eA-Jfn.segmentTitles[2]" = "中";
+
+/* Class = "UISegmentedControl"; p2B-eA-Jfn.segmentTitles[3] = "高"; ObjectID = "p2B-eA-Jfn"; */
+"p2B-eA-Jfn.segmentTitles[3]" = "高";
+
+/* Class = "UILabel"; text = "开关"; ObjectID = "vsn-bx-RGL"; */
+"vsn-bx-RGL.text" = "开关";
+
+/* Class = "UINavigationItem"; title = "传感器"; ObjectID = "xpo-GD-HGu"; */
+"xpo-GD-HGu.title" = "传感器";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "xvO-Gd-hKU"; */
+"xvO-Gd-hKU.title" = "Item";
+
+/* Class = "UITabBarItem"; title = "定时任务"; ObjectID = "zEm-Ar-BPH"; */
+"zEm-Ar-BPH.title" = "定时任务";

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DevicePickerView" customModule="华睿云" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="371" height="426"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加设备" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBG-Di-RKl" userLabel="title">
+                    <rect key="frame" x="158" y="0.0" width="56" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="UEi-eb-nMR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dR-y5-hYz">
+                    <rect key="frame" x="327" y="0.0" width="30" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="hvr-m5-UDl"/>
+                    </constraints>
+                    <state key="normal" title="全选"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3p-Wl-Z8o" customClass="ScrollTitleView" customModule="华睿云" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="45" width="371" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Atv-SU-H3V"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Wl-X6-lFL" userLabel="Scroll Container View">
+                    <rect key="frame" x="0.0" y="93" width="371" height="283"/>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgT-AN-hy4">
+                    <rect key="frame" x="0.0" y="376" width="371" height="50"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eeS-4x-xEo" userLabel="Hor_line">
+                            <rect key="frame" x="0.0" y="0.0" width="371" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="eBX-j7-vIU"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOM-kh-fyd" userLabel="Cancel">
+                            <rect key="frame" x="0.0" y="10" width="186" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="取消"/>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8e7-j1-Fdb" userLabel="Ver_line">
+                            <rect key="frame" x="185" y="0.0" width="1" height="50"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="vxC-RV-g4r"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXk-MX-UNq" userLabel="Done">
+                            <rect key="frame" x="186" y="10" width="185" height="30"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <state key="normal" title="完成"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="IXk-MX-UNq" firstAttribute="centerY" secondItem="hgT-AN-hy4" secondAttribute="centerY" id="071-BU-4Ue"/>
+                        <constraint firstAttribute="height" constant="50" id="6DJ-LS-0jN"/>
+                        <constraint firstItem="oOM-kh-fyd" firstAttribute="width" secondItem="hgT-AN-hy4" secondAttribute="width" multiplier="1:2" id="9lG-ij-IWm"/>
+                        <constraint firstItem="IXk-MX-UNq" firstAttribute="width" secondItem="hgT-AN-hy4" secondAttribute="width" multiplier="1:2" id="EGm-h6-v6U"/>
+                        <constraint firstItem="8e7-j1-Fdb" firstAttribute="centerX" secondItem="hgT-AN-hy4" secondAttribute="centerX" id="Fzu-1Y-lSB"/>
+                        <constraint firstItem="oOM-kh-fyd" firstAttribute="leading" secondItem="hgT-AN-hy4" secondAttribute="leading" id="KgK-H2-o7y"/>
+                        <constraint firstAttribute="trailing" secondItem="eeS-4x-xEo" secondAttribute="trailing" id="Mg6-PQ-VjV"/>
+                        <constraint firstAttribute="trailing" secondItem="IXk-MX-UNq" secondAttribute="trailing" id="c3h-3F-b5r"/>
+                        <constraint firstItem="eeS-4x-xEo" firstAttribute="leading" secondItem="hgT-AN-hy4" secondAttribute="leading" id="faE-dq-oNW"/>
+                        <constraint firstAttribute="bottom" secondItem="8e7-j1-Fdb" secondAttribute="bottom" id="gAO-N4-rrN"/>
+                        <constraint firstItem="eeS-4x-xEo" firstAttribute="top" secondItem="hgT-AN-hy4" secondAttribute="top" id="ulr-ra-vEB"/>
+                        <constraint firstItem="8e7-j1-Fdb" firstAttribute="top" secondItem="hgT-AN-hy4" secondAttribute="top" id="vVu-8x-LN1"/>
+                        <constraint firstItem="oOM-kh-fyd" firstAttribute="centerY" secondItem="hgT-AN-hy4" secondAttribute="centerY" id="yKf-iw-t0C"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="J3p-Wl-Z8o" firstAttribute="top" secondItem="eBG-Di-RKl" secondAttribute="bottom" id="5mC-Qe-IAX"/>
+                <constraint firstAttribute="trailing" secondItem="4dR-y5-hYz" secondAttribute="trailing" constant="14" id="6Td-qx-do5"/>
+                <constraint firstAttribute="bottom" secondItem="hgT-AN-hy4" secondAttribute="bottom" id="AkW-bM-bht"/>
+                <constraint firstAttribute="trailing" secondItem="hgT-AN-hy4" secondAttribute="trailing" id="KoV-pW-TuB"/>
+                <constraint firstItem="eBG-Di-RKl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LAa-lX-dir"/>
+                <constraint firstItem="4dR-y5-hYz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Lek-9C-VWL"/>
+                <constraint firstItem="eBG-Di-RKl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ze4-0I-MyL"/>
+                <constraint firstAttribute="trailing" secondItem="5Wl-X6-lFL" secondAttribute="trailing" id="Zo3-Cr-ci4"/>
+                <constraint firstAttribute="trailing" secondItem="J3p-Wl-Z8o" secondAttribute="trailing" id="eRk-FP-dgD"/>
+                <constraint firstItem="hgT-AN-hy4" firstAttribute="top" secondItem="5Wl-X6-lFL" secondAttribute="bottom" id="gKS-Aw-1Kv"/>
+                <constraint firstItem="J3p-Wl-Z8o" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jyu-n5-BT6"/>
+                <constraint firstItem="5Wl-X6-lFL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="l2G-Qv-jGn"/>
+                <constraint firstItem="hgT-AN-hy4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="t74-14-kJu"/>
+                <constraint firstItem="5Wl-X6-lFL" firstAttribute="top" secondItem="J3p-Wl-Z8o" secondAttribute="bottom" id="yOZ-lN-0YI"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelButton" destination="oOM-kh-fyd" id="hRQ-e0-XPt"/>
+                <outlet property="doneButton" destination="IXk-MX-UNq" id="BLb-Ws-V8i"/>
+                <outlet property="horizontalLine" destination="eeS-4x-xEo" id="gDR-uy-deq"/>
+                <outlet property="scrollContainerView" destination="5Wl-X6-lFL" id="1Lx-ed-NaC"/>
+                <outlet property="scrollTitleView" destination="J3p-Wl-Z8o" id="Sr2-FZ-tXb"/>
+                <outlet property="selectAllButton" destination="4dR-y5-hYz" id="5jo-wd-2I9"/>
+                <outlet property="titleLabel" destination="eBG-Di-RKl" id="kIf-6H-BvG"/>
+                <outlet property="verticalLine" destination="8e7-j1-Fdb" id="Ghl-CY-fzY"/>
+            </connections>
+            <point key="canvasLocation" x="261.5" y="472"/>
+        </view>
+    </objects>
+</document>
