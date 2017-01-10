@@ -142,7 +142,7 @@ class HomeViewController: UIViewController, VoiceResultDelegate, HR8000HelperDel
 //		buttons.settingsButton.tag = 104
 		voiceButton.voiceButton.tag = 105
 		
-        //背景图片
+        //背景图片 a 
         self.view.layer.contents = UIImage(named:"图层-0")?.CGImage
         
         
