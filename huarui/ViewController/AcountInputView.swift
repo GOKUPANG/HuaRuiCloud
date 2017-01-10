@@ -64,8 +64,16 @@ class AcountInputView: UIView, UITableViewDelegate, UITableViewDataSource {
 		
 		dropPickerButton.setImage(UIImage(named: "ico_user_pick"), forState: .Normal)
 		dropPickerButton.addTarget(self, action: #selector(AcountInputView.onDropPickerButtonClicked(_:)), forControlEvents: .TouchUpInside)
+        
+        
 		userImageView.image = UIImage(named: "ico_user")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
 		passwdImageView.image = UIImage(named: "ico_passwd")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        
+        userImageView.tintColor = UIColorFromRGB("#0fa7d6")
+        passwdImageView.tintColor = UIColorFromRGB("#0fa7d6")
+        
+        
+        
 		lineView = UIView()
 		lineView.backgroundColor = UIColor.lightGrayColor()
 		
@@ -81,6 +89,39 @@ class AcountInputView: UIView, UITableViewDelegate, UITableViewDataSource {
 	    fatalError("init(coder:) has not been implemented")
 	}
 	
+    
+    func UIColorFromRGB (hex:String) -> UIColor {
+        
+        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercaseString
+        
+        
+        
+        if (cString.hasPrefix("#")) {
+            
+            cString = (cString as NSString).substringFromIndex(1)
+            
+        }
+        
+        let rString = (cString as NSString).substringToIndex(2)
+        
+        let gString = ((cString as NSString).substringFromIndex(2) as NSString).substringToIndex(2)
+        
+        let bString = ((cString as NSString).substringFromIndex(4) as NSString).substringToIndex(2)
+        
+        
+        
+        var r:CUnsignedInt = 0, g:CUnsignedInt = 0, b:CUnsignedInt = 0;
+        
+        NSScanner(string: rString).scanHexInt(&r)
+        
+        NSScanner(string: gString).scanHexInt(&g)
+        
+        NSScanner(string: bString).scanHexInt(&b)
+        
+        return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: CGFloat(1))
+        
+    }
+    
     override func drawRect(rect: CGRect) {
 		userImageView.frame = CGRectMake(0, 0, rect.midY, rect.midY)
 		passwdImageView.frame = CGRectMake(0, rect.midY, rect.midY, rect.midY)

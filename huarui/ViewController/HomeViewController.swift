@@ -11,11 +11,13 @@ import Alamofire
 
 
 /// 登陆之后的主界面
-class HomeViewController: UIViewController, VoiceResultDelegate, HR8000HelperDelegate, UIAlertViewDelegate {
+class HomeViewController: UIViewController, VoiceResultDelegate, HR8000HelperDelegate, UIAlertViewDelegate ,UITableViewDelegate , UITableViewDataSource {
 //MARK: - 属性
 	var buttons: HomeButtonsView!
 	var voiceButton: VoiceButtonView!
     var ADImageView: UIImageView!
+    var myTableView: UITableView!
+    
 
     lazy private var registerCount = 0
 //MARK: - 方法
@@ -68,29 +70,60 @@ class HomeViewController: UIViewController, VoiceResultDelegate, HR8000HelperDel
         let adView = ADScrollView(frame: CGRectMake(0, 0, viewW, viewH))
         adView.images = ["ad_image_1","ad_image_2"]
         
-        
-        
       //  adView.images = ["ad_image_1"]
 
         adView.changeImageTime = 4.0
-     //   view.addSubview(adView)
-        //oc 的写法
-        //[self.view addSubview:adView];
+        
+        
+        
+          //view.addSubview(adView)
+         //oc 的写法
+         //[self.view addSubview:adView];
 
         
 		
 		var tmpRate:CGFloat = 0.9
 		var buttonsWidth = view.bounds.width * tmpRate
+        
+     //   print("水水水水\(cellHeight)")
 		var voiceBtnHeight = buttonsWidth * 0.35
 		while buttonsWidth + voiceBtnHeight + adView.frame.maxY + 10 > view.bounds.height {
 			tmpRate -= 0.05
 			buttonsWidth = view.bounds.width * tmpRate
 			voiceBtnHeight = buttonsWidth * 0.35
 		}
+        let cellHeight = buttonsWidth * 0.25 - 0.25
+        
+        print("水水水水\(cellHeight)")
+
+
+        
+//        myTableView = UITableView(frame: CGRectMake(0, adView.frame.maxY + 10,self.view.bounds.width, buttonsWidth, style:))
+        
+        myTableView = UITableView.init(frame: CGRectMake(0, adView.frame.maxY, self.view.frame.size.width , buttonsWidth))
+        
+        myTableView.delegate = self
+        
+        myTableView.dataSource = self
+        
+        myTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "reuse")
+        
+        myTableView.rowHeight = cellHeight
+        
+        myTableView.scrollEnabled = false //设置tableview 不能滚动
+        
+        myTableView.tableFooterView = UIView.init()
+        
+        myTableView.backgroundColor = UIColor.clearColor()
+        
+        
+        
+        
+       view.addSubview(myTableView)
 		
 		buttons = HomeButtonsView(frame: CGRectMake(0, adView.frame.maxY + 10, buttonsWidth, buttonsWidth))
 		buttons.center.x = self.view.center.x
-		self.view.addSubview(buttons)
+		//self.view.addSubview(buttons)
 		buttons.homeManagerButton.addTarget(self, action: #selector(HomeViewController.onButtonClicked(_:)), forControlEvents: .TouchUpInside)
 		buttons.viewCtrlButton.addTarget(self, action: #selector(HomeViewController.onButtonClicked(_:)), forControlEvents: .TouchUpInside)
 		buttons.sceneManagerButton.addTarget(self, action: #selector(HomeViewController.onButtonClicked(_:)), forControlEvents: .TouchUpInside)
@@ -103,14 +136,18 @@ class HomeViewController: UIViewController, VoiceResultDelegate, HR8000HelperDel
 		view.tintColor = UIColor(R: 48, G: 188, B: 237, alpha: 0.5)
 		voiceButton.voiceButton.addTarget(self, action: #selector(HomeViewController.onButtonClicked(_:)), forControlEvents: .TouchUpInside)
 		
-		buttons.homeManagerButton.tag = 101
-		buttons.viewCtrlButton.tag = 102
-		buttons.sceneManagerButton.tag = 103
-		buttons.settingsButton.tag = 104
+//		buttons.homeManagerButton.tag = 101
+//		buttons.viewCtrlButton.tag = 102
+//		buttons.sceneManagerButton.tag = 103
+//		buttons.settingsButton.tag = 104
 		voiceButton.voiceButton.tag = 105
 		
         //背景图片
-        self.view.layer.contents = UIImage(named: APP.param.backgroundImgName)?.CGImage
+        self.view.layer.contents = UIImage(named:"图层-0")?.CGImage
+        
+        
+    //self.view.backgroundColor = UIColor.whiteColor()
+        
 		
 		//注销按钮
 		let  logoutButton = UIBarButtonItem(title: "注销", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(HomeViewController.tapLogoutButton(_:)))
@@ -122,6 +159,111 @@ class HomeViewController: UIViewController, VoiceResultDelegate, HR8000HelperDel
 //        let leftVC = SlideNavigationController.sharedInstance().leftMenu as! LeftMenuViewController
 //        leftVC.tableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: UITableViewScrollPosition.Top)
     }
+    
+    
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        
+        
+        return 4
+        
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        
+        /// 定义一个cell
+        let str:String = "reuse"
+        var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(str, forIndexPath: indexPath) 
+        if cell.isEqual(nil){
+            
+            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: str)
+        }
+        /**
+         cell赋值
+         */
+        
+        switch indexPath.row {
+        case 0:
+            
+            
+             cell.imageView?.image = UIImage.init(named: "家居控制")
+             
+             
+             cell.textLabel?.text = "家居控制"
+            
+            
+            break
+            
+        case 1 :
+            
+            
+            cell.imageView?.image = UIImage.init(named: "可见可控")
+            
+            
+            cell.textLabel?.text = "可见可控"
+
+            
+            break
+            
+        case 2 :
+            
+            
+            cell.imageView?.image = UIImage.init(named: "情景管理")
+            
+            
+            cell.textLabel?.text = "情景管理"
+
+            
+            break
+            
+        case 3 :
+            cell.imageView?.image = UIImage.init(named: "系统设置")
+            
+            
+            cell.textLabel?.text = "系统设置"
+
+            
+            break
+            
+            
+            
+        default:
+            
+            break
+        }
+        
+        
+        cell . backgroundColor = UIColor.clearColor()
+        
+       
+        return cell
+        
+        
+    }
+    
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        
+        switch indexPath.row {
+        case 0:   //家居管理
+            self.performSegueWithIdentifier("showCommonViewController", sender: nil)
+        case 1:   //可视对讲
+            self.loginTo2cu()
+        case 2:   //情景管理
+            self.performSegueWithIdentifier("showSceneManager", sender: nil)
+        //            self.performSegueWithIdentifier("showSceneViewController", sender: nil)
+        case 3:	//系统设置
+            self.performSegueWithIdentifier("showSettingViewController", sender: nil)
+            
+              default: break
+        }
+        
+    }
+    
     
 	override func viewWillAppear(animated: Bool) {
 		navigationController?.navigationBar.translucent = false
@@ -172,11 +314,8 @@ class HomeViewController: UIViewController, VoiceResultDelegate, HR8000HelperDel
 	@objc private func tapLogoutButton(button: UIButton) {
 		UIAlertView(title: "您确定要注销吗？", message: "", delegate: self, cancelButtonTitle: "取消", otherButtonTitles: "注销").show()
         
-       
 	}
     
-    
-	
 	func alertView(alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int) {
 		if buttonIndex != alertView.cancelButtonIndex {
 			navigationController?.popViewControllerAnimated(true)
@@ -241,9 +380,6 @@ class HomeViewController: UIViewController, VoiceResultDelegate, HR8000HelperDel
                 //oc 的写法
                 //[self.view addSubview:adView];
                 
-                
-              
-                
                 adView.setImageWithURL(NSURL.init(string: item))
                 
                 
@@ -263,9 +399,6 @@ class HomeViewController: UIViewController, VoiceResultDelegate, HR8000HelperDel
             adView.image = UIImage(named: "华睿云")
             
             }
-            
-            
-          
             
 //        Alamofire.request("https://api.500px.com/v1/photos", method: .get).responseJSON {
 //            response in

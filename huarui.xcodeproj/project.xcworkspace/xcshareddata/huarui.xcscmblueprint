@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3070A8AD16B5B1BC33BC34C0E3060E823C4E822A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3070A8AD16B5B1BC33BC34C0E3060E823C4E822A" : 9223372036854775807,
+    "EFCF3823B898F4ED3AA4089C5810DE2C1D3F65EE" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D65DD294-A175-4AAC-89E8-20F816BEAB1D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3070A8AD16B5B1BC33BC34C0E3060E823C4E822A" : "huaruicloud-ios-master\/",
+    "EFCF3823B898F4ED3AA4089C5810DE2C1D3F65EE" : "huaruicloud"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "huarui",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "huarui.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "192.168.188:jack\/huaruicloud-ios-nsl.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3070A8AD16B5B1BC33BC34C0E3060E823C4E822A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/192.168.0.188\/ios\/iphone\/huaruicloud",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EFCF3823B898F4ED3AA4089C5810DE2C1D3F65EE"
+    }
+  ]
+}

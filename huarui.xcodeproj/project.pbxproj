@@ -727,7 +727,7 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		4AE481B41DF79C22008F5303 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
@@ -3039,9 +3039,9 @@
 		D1AFD35E1A7F68E200A0201F /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				D1AAFC451A83981C00090857 /* Images.xcassets */,
 				D12BEBA51AF21617007ED4C2 /* voice.xcassets */,
 				D1AAFC431A83981000090857 /* 情景图标.xcassets */,
+				D1AAFC451A83981C00090857 /* Images.xcassets */,
 				D1AFECE81A67D9070004D39D /* Backgrounds.xcassets */,
 				D1AAFC411A83977100090857 /* 设备图标.xcassets */,
 				D1B71FF51AC285AA007DBA6C /* 窗帘控制.xcassets */,

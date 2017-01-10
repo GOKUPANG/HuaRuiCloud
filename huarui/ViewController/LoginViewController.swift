@@ -44,7 +44,9 @@ class LoginViewController: UIViewController, AcountInputViewDelegate, UIAlertVie
 	private func initDatas() {
 		//从coreData中获取用户信息
 		savedUsers = getUsersFromDatabase()
-		self.view.tintColor = UIColor(R: 171, G: 66, B: 51, alpha: 1)
+		//self.view.tintColor = UIColor(R: 171, G: 66, B: 51, alpha: 1)
+        
+        self.view.tintColor = UIColor(R: 15, G: 167, B: 214, alpha: 1)
 	}
 	
 	private func addViews() {
@@ -64,7 +66,9 @@ class LoginViewController: UIViewController, AcountInputViewDelegate, UIAlertVie
 		//添加品牌logo
 		let brandImageView = UIImageView(frame: CGRectMake(0, acountView.frame.minY - 90, self.view.bounds.width, 50))
 		brandImageView.contentMode = .ScaleAspectFit
-		brandImageView.image = UIImage(named: "华睿云中文")
+		//brandImageView.image = UIImage(named: "华睿云中文")
+        brandImageView.image = UIImage(named: "新logo")
+
 		self.view.addSubview(brandImageView)
 		
 		//记住密码与自动登录
@@ -124,7 +128,7 @@ class LoginViewController: UIViewController, AcountInputViewDelegate, UIAlertVie
 	
 	
 	private func initViews() {
-		self.view.layer.contents = UIImage(named: APP.param.backgroundImgName)?.CGImage
+		self.view.layer.contents = UIImage(named: "图层-0")?.CGImage
 		self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(LoginViewController.onViewTap(_:))))
 		acountView.users = savedUsers
 		if savedUsers.count > 0 {

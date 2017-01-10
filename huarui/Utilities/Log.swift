@@ -16,7 +16,7 @@ import Foundation
 /// 3、输出大于或等于INFO日志级别的信息
 /// 4、输出大于或等于WARN日志级别的信息
 /// 5、仅输出ERROR日志级别的信息.
-let DEBUG_LEVEL = 1
+let DEBUG_LEVEL = 6
 
 ///调试
 ///

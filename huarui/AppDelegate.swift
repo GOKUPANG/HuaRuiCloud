@@ -33,9 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIAlertViewDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		
 		//DDLog日志打印，发布APP时，注释掉
-		//#if DEBUG
+    #if DEBUG
 		setLogger()
-		//#endif
+    #endif
         //setLogger()
         
         //显示SDK的版本号  
@@ -107,7 +107,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIAlertViewDelegate {
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
         Log.verbose("RemoteNotifications Deivce Token:\(deviceToken)")
         
-
+       print("RemoteNotifications Deivce Token:\(deviceToken)")
         
 //        var alertView = UIAlertView()
 //        alertView.title = "系统提示"
@@ -117,6 +117,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIAlertViewDelegate {
 //        alertView.cancelButtonIndex=0
 //        alertView.delegate=self;
 //        alertView.show()
+//        
+//        
+//        
+//        let textView = UITextView.init(frame: CGRectMake(100, 101, 500, 30))
+//        
+//        textView.text = "dtoken\(deviceToken)"
+//        
+//        
+//        self.window?.addSubview(textView)
+//        
+        
         
         
       

@@ -24,7 +24,7 @@ class BaseManagerViewController: UIViewController, SlipMenuAddDeviceViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         //设置背景图片
-        self.view.layer.contents = UIImage(named: APP.param.backgroundImgName)?.CGImage
+        self.view.layer.contents = UIImage(named: "图层-0")?.CGImage
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BaseManagerViewController.socketDisconnected), name: kNotificationDidSocketDisconnected, object: nil)
     }
 	
