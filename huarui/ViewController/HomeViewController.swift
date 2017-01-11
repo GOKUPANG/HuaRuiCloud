@@ -76,6 +76,16 @@ class HomeViewController: UIViewController, VoiceResultDelegate, HR8000HelperDel
         
         
         
+       
+        ADImageView = UIImageView(frame: CGRectMake(0, 0, viewW, viewH))
+        self.view.addSubview(ADImageView)
+        
+        
+        self.ADImageView.image = UIImage(named: "华睿云")
+
+        
+        
+        
           //view.addSubview(adView)
          //oc 的写法
          //[self.view addSubview:adView];
@@ -142,7 +152,7 @@ class HomeViewController: UIViewController, VoiceResultDelegate, HR8000HelperDel
 //		buttons.settingsButton.tag = 104
 		voiceButton.voiceButton.tag = 105
 		
-        //背景图片 a 
+        //背景图片 
         self.view.layer.contents = UIImage(named:"图层-0")?.CGImage
         
         
@@ -344,7 +354,8 @@ class HomeViewController: UIViewController, VoiceResultDelegate, HR8000HelperDel
     }
     
     
-    
+    //MARK: -  获取图片数据
+ 
     
     func getHttpImageData() {
         
@@ -373,14 +384,14 @@ class HomeViewController: UIViewController, VoiceResultDelegate, HR8000HelperDel
                 
                 
                 //广告栏
-                let viewW = self.view.frame.width
-                let viewH = self.view.frame.width / 2.5
-                let adView = UIImageView(frame: CGRectMake(0, 0, viewW, viewH))
-                self.view.addSubview(adView)
+//                let viewW = self.view.frame.width
+//                let viewH = self.view.frame.width / 2.5
+//                let adView = UIImageView(frame: CGRectMake(0, 0, viewW, viewH))
+//                self.view.addSubview(adView)
                 //oc 的写法
                 //[self.view addSubview:adView];
                 
-                adView.setImageWithURL(NSURL.init(string: item))
+                self.ADImageView.setImageWithURL(NSURL.init(string: item))
                 
                 
                 print("JSON: \(item)")
@@ -391,12 +402,12 @@ class HomeViewController: UIViewController, VoiceResultDelegate, HR8000HelperDel
             print(error)
             
             
-            let viewW = self.view.frame.width
-            let viewH = self.view.frame.width / 2.5
-            let adView = UIImageView(frame: CGRectMake(0, 0, viewW, viewH))
-            self.view.addSubview(adView)
+//            let viewW = self.view.frame.width
+//            let viewH = self.view.frame.width / 2.5
+//            let adView = UIImageView(frame: CGRectMake(0, 0, viewW, viewH))
+//            self.view.addSubview(adView)
             
-            adView.image = UIImage(named: "华睿云")
+            self.ADImageView.image = UIImage(named: "华睿云")
             
             }
             
