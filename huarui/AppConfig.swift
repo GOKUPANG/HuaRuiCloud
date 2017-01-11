@@ -26,8 +26,16 @@ let BROADCAST_TIME_OUT: Int32    = 1500
 let TCP_RCV_TIMEOUT: Int         = 8000
 /**TCP创建连接超时，单位毫秒*/
 let TCP_CNCT_TIMEOUT: Int        = 5000
+
 ///登陆超时时间，单位为毫秒
-let LOGIN_TIME_OUT:Int32         = 5000
+//let LOGIN_TIME_OUT:Int32         = 5000
+
+/// 登陆超时时间  ，原本是5秒 现在改成10秒
+let LOGIN_TIME_OUT:Int32         = 10000
+
+
+
+
 ///搜索主机的广播地址
 let BROADCAST_ADDRESS            = "255.255.255.255"
 /**外网服务器IP地址*/
